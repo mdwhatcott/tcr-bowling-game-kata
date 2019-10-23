@@ -47,3 +47,7 @@ func (this *GameFixture) TestStrike() {
 	this.rollSeveral(10, 3, 4)
 	this.assertScore(24)
 }
+func (this *GameFixture) TestPerfectGame() {
+	this.rollMany(12, 10)
+	this.assertScore(300)
+}

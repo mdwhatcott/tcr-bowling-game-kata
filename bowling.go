@@ -14,17 +14,18 @@ func (this *Game) RecordRoll(pins int) {
 func (this *Game) CalculateScore() int {
 	this.throw = 0
 	for frame := 0; frame < 10; frame++ {
-		this.scoreCurrentFrame()
+		this.score += this.scoreCurrentFrame()
+		this.throw += this.advanceFrame()
 	}
 	return this.score
 }
-func (this *Game) scoreCurrentFrame() {
+func (this *Game) scoreCurrentFrame() int {
 	if this.currentFrameIsStrike() {
-		this.scoreStrikeFrame()
+		return this.scoreStrikeFrame()
 	} else if this.currentFrameIsSpare() {
-		this.scoreSpareFrame()
+		return this.scoreSpareFrame()
 	} else {
-		this.scoreRegularFrame()
+		return this.scoreRegularFrame()
 	}
 }
 func (this *Game) currentFrameIsStrike() bool {
@@ -33,21 +34,25 @@ func (this *Game) currentFrameIsStrike() bool {
 func (this *Game) currentFrameIsSpare() bool {
 	return this.frameScore() == 10
 }
-func (this *Game) scoreStrikeFrame() {
-	this.score += 10 + this.pins(1) + this.pins(2)
-	this.throw += 1
+func (this *Game) scoreStrikeFrame() int {
+	return 10 + this.pins(1) + this.pins(2)
 }
-func (this *Game) scoreSpareFrame() {
-	this.score += 10 + this.pins(2)
-	this.throw += 2
+func (this *Game) scoreSpareFrame() int {
+	return 10 + this.pins(2)
 }
-func (this *Game) scoreRegularFrame() {
-	this.score += this.frameScore()
-	this.throw += 2
+func (this *Game) scoreRegularFrame() int {
+	return this.frameScore()
 }
 func (this *Game) frameScore() int {
 	return this.pins(0) + this.pins(1)
 }
 func (this *Game) pins(offset int) int {
 	return this.throws[this.throw+offset]
+}
+func (this *Game) advanceFrame() int {
+	if this.currentFrameIsStrike() {
+		return 1
+	} else {
+		return 2
+	}
 }
