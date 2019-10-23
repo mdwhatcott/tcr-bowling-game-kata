@@ -43,3 +43,7 @@ func (this *GameFixture) TestSpare() {
 	this.rollSeveral(5, 5, 3)
 	this.assertScore(16)
 }
+func (this *GameFixture) TestStrike() {
+	this.rollSeveral(10, 3, 4)
+	this.assertScore(24)
+}
