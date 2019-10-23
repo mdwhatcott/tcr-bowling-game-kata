@@ -30,3 +30,7 @@ func (this *GameFixture) TestGutterGame() {
 	this.rollMany(20, 0)
 	this.assertScore(0)
 }
+func (this *GameFixture) TestAllOnes() {
+	this.rollMany(20, 1)
+	this.assertScore(20)
+}
