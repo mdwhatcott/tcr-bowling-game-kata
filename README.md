@@ -9,7 +9,7 @@ A demonstration of TCR and the "Bowling Game" programming kata by Robert "Uncle 
 
 ## The code:
 
-- https://github.com/mdwhatcott/tcr-bow...
+- https://github.com/mdwhatcott/tcr-bowling-game-kata
 
 
 ## The tools:
@@ -19,25 +19,25 @@ A demonstration of TCR and the "Bowling Game" programming kata by Robert "Uncle 
 
 ## The original bowling game kata:
 
-- http://butunclebob.com/ArticleS.Uncle...
-- http://butunclebob.com/files/download...
+- http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
+- http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt
 
 
 ## Uncle Bob's presentation:
 
-- https://cleancoders.com/video-details... (payment required)
+- https://cleancoders.com/video-details/clean-code-episode-6-p2 (payment required)
 
 
 ## Kent Beck's blog post on TCR:
 
-- TCR Introduction: https://medium.com/@kentbeck_7670/tes...
+- https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864
 
 
 ## Kent Beck's substring kata demonstration: 
 
-- https://www.youtube.com/watch?v=ZrHBV...
+- https://www.youtube.com/watch?v=ZrHBVTCbcE0
 
 
 ## Kent Beck and Kelly Sutton on using TCR to understand "legacy code":
 
-- https://www.youtube.com/watch?v=FFzHO...
+- https://www.youtube.com/watch?v=FFzHOyFeovE
